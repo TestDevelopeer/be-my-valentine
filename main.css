@@ -1,0 +1,255 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body{
+  background: url(https://subtlepatterns.com/patterns/noise_lines.png);
+  font-family: 'Pacifico', cursive;
+  overflow: hidden;
+  color: #fff;
+}
+.bgoverlay{
+  background: rgb(103,58,183);
+  background: rgba(103,58,183,0.7);
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.container{
+  position: relative;
+  margin: 120px auto 0 auto;
+  width: 320px;
+}
+
+
+.ico{
+	cursor: pointer;
+  display: block;
+  width: 320px;
+  height: 400px;
+}
+.open .ico{
+  animation: open 4s;
+  transform: scale(10);
+}
+.ico .title{
+  z-index: 4;
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.open .ico .title{
+  opacity: 0;
+  transition: all 0.3s ease;
+  top:-100px;
+}
+.ico:before,
+.ico:after,
+.ico2:before,
+.ico2:after{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.ico:before,
+.ico:after,
+.ico2:before,
+.ico2:after{
+  display: block;
+  font-size: 20em;
+  color: #ff4081;
+  content: "\f004";
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico2:before,
+.ico2:after{
+  color: #e91e63;
+}
+.ico:before{
+  z-index: 3;
+}
+.ico:after{
+  animation: explode 4s infinite;
+}
+
+
+.ico2:before{
+  animation: explodeSmall 3s infinite;
+}
+.ico2:after{
+  animation: explodeSmall 2s infinite;
+}
+
+
+.endtext{
+  opacity:0;
+  position: absolute;
+  top:-100px;
+  width:100%;
+}
+.endtext img {
+	width: 100%;
+	height: 200px;
+	object-fit: contain;
+	margin-bottom: 50px;
+}
+.open .endtext{
+  top:0;
+  opacity: 1;
+  animation: show 5s;
+}
+.endtext .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.endtext h1,
+.endtext h2,
+.endtext h3{
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  text-align: center;
+  font-weight: normal;
+}
+.endtext h1{
+  font-size: 50px;
+}
+.endtext h2{
+  font-size: 30px;
+}
+.endtext h3{
+  font-size: 20px;
+}
+
+
+@keyframes explode {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+}
+@keyframes explodeSmall {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+}
+
+
+@keyframes open {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(10);
+    }
+}
+
+@keyframes show {
+    from {
+      opacity: 0;
+      top: -100px;
+    }
+    to {
+      opacity: 1;
+      top:0;
+    }
+}
+.op-0 {
+	z-index: -1!important;
+	opacity: 0;
+}
+.buttons-block {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.button-propose {
+	width: 100px;
+    height: 50px;
+}
+.button-propose.no {
+	z-index: 999999;
+}
+.button-propose.yes {
+	z-index: 1;
+	position: absolute;
+	transition: all 0.5s;
+}
+
+.button-propose.yes-1 {
+	left: 40px;
+	top: 35px;
+}
+.button-propose.yes-2 {
+	right: 70px;
+	top: 40px;
+}
+.button-propose.yes-3 {
+	left: 20px;
+	top: 80px;
+}
+.button-propose.yes-4 {
+	right: 20px;
+	top: 90px;
+}
+.button-propose.yes-5 {
+	left: 50px;
+	top: 120px;
+}
+.button-propose.yes-6 {
+	right: 50px;
+	top: 120px;
+}
+.button-propose.yes-7 {
+	left: 98px;
+	bottom: 50px
+}
+.button-propose.yes-8 {
+	right: 5px;
+	bottom: 40px;
+}
+.button-propose.yes-9 {
+	left: 20px;
+	bottom: 80px;
+}
+.button-propose.yes-10 {
+	right: 20px;
+	bottom: 90px;
+}
+.button-propose.yes-11 {
+	left: 65px;
+	bottom: 100px;
+}
+.button-propose.yes-12 {
+	right: 50px;
+	top: 10px;
+}
+.button-propose.yes-13 {
+	left: 3px;
+	bottom: 0px;
+}
+.button-propose.yes-14 {
+	right: 3px;
+	bottom: 0px;
+}
+.yestext {
+	transition: all 0.5s;
+}
+.yestext h1 {
+	overflow-wrap: break-word;
+}
